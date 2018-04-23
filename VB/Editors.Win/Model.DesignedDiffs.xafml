@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<Application>
+  <Localization>
+    <LocalizationGroup Name="Controls" IsNewNode="True">
+      <LocalizationGroup Name="LookupPropertyEditorEx" IsNewNode="True">
+        <LocalizationItem Name="AddButtonToolTip" Value="Create an associated record" IsNewNode="True" />
+        <LocalizationItem Name="MinusButtonToolTip" Value="Remove the associated record" IsNewNode="True" />
+        <LocalizationItem Name="OpenButtonToolTip" Value="Open details of the associated record" IsNewNode="True" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+  </Localization>
+</Application>
