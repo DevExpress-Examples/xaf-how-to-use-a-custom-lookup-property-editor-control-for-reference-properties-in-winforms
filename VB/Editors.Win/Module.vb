@@ -1,12 +1,14 @@
+﻿Imports System
 Imports DevExpress.ExpressApp
 Imports System.ComponentModel
 
 Namespace Editors.Win
-	<ToolboxItem(True), Browsable(True), EditorBrowsable(EditorBrowsableState.Always)> _
-	Public NotInheritable Partial Class EditorsWindowsFormsModule
-		Inherits ModuleBase
-		Public Sub New()
-			InitializeComponent()
-		End Sub
-	End Class
+    <ToolboxItem(True), Browsable(True), EditorBrowsable(EditorBrowsableState.Always)> _
+    Public NotInheritable Partial Class EditorsWindowsFormsModule
+        Inherits ModuleBase
+
+        Public Sub New()
+            InitializeComponent()
+        End Sub
+    End Class
 End Namespace
