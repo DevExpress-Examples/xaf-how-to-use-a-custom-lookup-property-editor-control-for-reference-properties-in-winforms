@@ -73,7 +73,7 @@ Namespace Editors.Win
             Dim minusButton As New EditorButton(ButtonPredefines.Minus)
             minusButton.Tag = MinusButtonTag
             minusButton.Enabled = AllowEdit.ResultValue
-            addButton.ToolTip = CaptionHelper.GetLocalizedText("Controls/LookupPropertyEditorEx", "MinusButtonToolTip")
+            minusButton.ToolTip = CaptionHelper.GetLocalizedText("Controls/LookupPropertyEditorEx", "MinusButtonToolTip")
             properties.Buttons.Add(minusButton)
         End Sub
         Private Sub properties_Disposed(ByVal sender As Object, ByVal e As EventArgs)
@@ -99,7 +99,7 @@ Namespace Editors.Win
         End Sub
         Protected Overridable Sub InitializeDataSource(ByVal lookup As LookUpEditEx)
             If lookup IsNot Nothing AndAlso lookup.Properties IsNot Nothing AndAlso lookup.Properties.Helper IsNot Nothing Then
-                lookup.Properties.DataSource = lookup.Properties.Helper.CreateCollectionSource(lookup.FindEditingObject()).List
+                lookup.InitializeDataSource()
             End If
         End Sub
         Private Sub ObjectSpace_Reloaded(ByVal sender As Object, ByVal e As EventArgs)
@@ -132,7 +132,7 @@ Namespace Editors.Win
                 disposedEventHandler = Sub(s, e)
                     Dim os As IObjectSpace = DirectCast(s, IObjectSpace)
                     RemoveHandler os.Disposed, disposedEventHandler
-                    os.Committed -= committedEventHandler
+                    RemoveHandler os.Committed, committedEventHandler
                 End Sub
                 AddHandler openObjectViewObjectSpace.Committed, committedEventHandler
                 AddHandler openObjectViewObjectSpace.Disposed, disposedEventHandler
@@ -161,7 +161,7 @@ Namespace Editors.Win
             disposedEventHandler = Sub(s, e)
                 Dim os As IObjectSpace = DirectCast(s, IObjectSpace)
                 RemoveHandler os.Disposed, disposedEventHandler
-                os.Committed -= committedEventHandler
+                RemoveHandler os.Committed, committedEventHandler
             End Sub
             AddHandler newObjectViewObjectSpace.Committed, committedEventHandler
             AddHandler newObjectViewObjectSpace.Disposed, disposedEventHandler

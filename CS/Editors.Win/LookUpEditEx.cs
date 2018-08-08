@@ -46,8 +46,14 @@ namespace Editors.Win {
             return BindingHelper.FindEditingObject(this);
         }
         private void OnEditingObjectChanged() {
+            InitializeDataSource();
             if(FindEditingObject() == null && EditValue != null) {
                 EditValue = null;
+            }
+        }
+        public void InitializeDataSource() {
+            if(Properties != null && Properties.Helper != null) {
+                Properties.DataSource = Properties.Helper.CreateCollectionSource(FindEditingObject()).List;
             }
         }
         private void DataBindings_CollectionChanged(object sender, CollectionChangeEventArgs e) {
