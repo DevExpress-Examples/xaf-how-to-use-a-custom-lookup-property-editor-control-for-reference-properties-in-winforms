@@ -1,8 +1,8 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WinSolution.Module", "WinSolution.Module\WinSolution.Module.vbproj", "{F45F73D7-548A-47EE-822D-3BBCC26220A0}"
-EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WinSolution.Win", "WinSolution.Win\WinSolution.Win.vbproj", "{8F5543FB-89C3-411D-A719-25A918349FD0}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WinSolution.Module", "WinSolution.Module\WinSolution.Module.vbproj", "{F45F73D7-548A-47EE-822D-3BBCC26220A0}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Editors.Win", "Editors.Win\Editors.Win.vbproj", "{0064FA37-D992-4598-BF73-B89AADA1DF57}"
 EndProject
