@@ -71,7 +71,7 @@ namespace Editors.Win {
             EditorButton minusButton = new EditorButton(ButtonPredefines.Minus);
             minusButton.Tag = MinusButtonTag;
             minusButton.Enabled = AllowEdit.ResultValue;
-            addButton.ToolTip = CaptionHelper.GetLocalizedText("Controls/LookupPropertyEditorEx", "MinusButtonToolTip");
+            minusButton.ToolTip = CaptionHelper.GetLocalizedText("Controls/LookupPropertyEditorEx", "MinusButtonToolTip");
             properties.Buttons.Add(minusButton);
         }
         private void properties_Disposed(object sender, EventArgs e) {
@@ -97,7 +97,7 @@ namespace Editors.Win {
         }
         protected virtual void InitializeDataSource(LookUpEditEx lookup) {
             if(lookup != null && lookup.Properties != null && lookup.Properties.Helper != null) {
-                lookup.Properties.DataSource = lookup.Properties.Helper.CreateCollectionSource(lookup.FindEditingObject()).List;
+                lookup.InitializeDataSource();
             }
         }
         private void ObjectSpace_Reloaded(object sender, EventArgs e) {
