@@ -73,7 +73,7 @@ Namespace Editors.Win
             Dim minusButton As New EditorButton(ButtonPredefines.Minus)
             minusButton.Tag = MinusButtonTag
             minusButton.Enabled = AllowEdit.ResultValue
-            addButton.ToolTip = CaptionHelper.GetLocalizedText("Controls/LookupPropertyEditorEx", "MinusButtonToolTip")
+            minusButton.ToolTip = CaptionHelper.GetLocalizedText("Controls/LookupPropertyEditorEx", "MinusButtonToolTip")
             properties.Buttons.Add(minusButton)
         End Sub
         Private Sub properties_Disposed(ByVal sender As Object, ByVal e As EventArgs)
@@ -99,7 +99,7 @@ Namespace Editors.Win
         End Sub
         Protected Overridable Sub InitializeDataSource(ByVal lookup As LookUpEditEx)
             If lookup IsNot Nothing AndAlso lookup.Properties IsNot Nothing AndAlso lookup.Properties.Helper IsNot Nothing Then
-                lookup.Properties.DataSource = lookup.Properties.Helper.CreateCollectionSource(lookup.FindEditingObject()).List
+                lookup.InitializeDataSource()
             End If
         End Sub
         Private Sub ObjectSpace_Reloaded(ByVal sender As Object, ByVal e As EventArgs)

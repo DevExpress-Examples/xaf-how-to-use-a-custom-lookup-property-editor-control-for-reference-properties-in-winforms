@@ -55,9 +55,15 @@ Namespace Editors.Win
             Return BindingHelper.FindEditingObject(Me)
         End Function
         Private Sub OnEditingObjectChanged()
+            InitializeDataSource()
             If FindEditingObject() Is Nothing AndAlso EditValue IsNot Nothing Then
                 EditValue = Nothing
             End If
+        End Sub
+        Public Sub InitializeDataSource()
+          If Properties IsNot Nothing AndAlso Properties.Helper IsNot Nothing Then
+            Properties.DataSource = Properties.Helper.CreateCollectionSource(FindEditingObject()).List
+          End If
         End Sub
         Private Sub DataBindings_CollectionChanged(ByVal sender As Object, ByVal e As CollectionChangeEventArgs)
             OnEditingObjectChanged()
