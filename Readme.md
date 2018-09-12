@@ -17,7 +17,8 @@ Alternatively, you can take the source code and include it in your solution.
 If you want to change this, then invoke the Model Editor for the Windows Forms application project or module, and change the EditorType property of the DetailViewItems | PropertyEditors | LookupProperty node. Or, change the PropertyEditorType property for a class member, ListView column or DetailView item nodes individually.
 
 #### See Also:
-Implement Custom Property Editors
-PropertyEditors.Lookup - Provide the capability to work with referenced properties via a simple drop down list
+[Implement Custom Property Editors](https://documentation.devexpress.com/eXpressAppFramework/113097/Concepts/UI-Construction/View-Items/Implement-Custom-Property-Editors)
+<br>
+[PropertyEditors.Lookup - How to provide alternative data representations for reference lookup properties (e.g., a simple drop-down box, a complex multi-column grid, or a tree view)](https://www.devexpress.com/Support/Center/Question/Details/S92425/propertyeditors-lookup-how-to-provide-alternative-data-representations-for-reference)
 
 
