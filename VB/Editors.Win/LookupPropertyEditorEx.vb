@@ -132,7 +132,7 @@ Namespace Editors.Win
                 disposedEventHandler = Sub(s, e)
                     Dim os As IObjectSpace = DirectCast(s, IObjectSpace)
                     RemoveHandler os.Disposed, disposedEventHandler
-                    os.Committed -= committedEventHandler
+                    RemoveHandler os.Committed, committedEventHandler
                 End Sub
                 AddHandler openObjectViewObjectSpace.Committed, committedEventHandler
                 AddHandler openObjectViewObjectSpace.Disposed, disposedEventHandler
@@ -161,7 +161,7 @@ Namespace Editors.Win
             disposedEventHandler = Sub(s, e)
                 Dim os As IObjectSpace = DirectCast(s, IObjectSpace)
                 RemoveHandler os.Disposed, disposedEventHandler
-                os.Committed -= committedEventHandler
+                RemoveHandler os.Committed, committedEventHandler
             End Sub
             AddHandler newObjectViewObjectSpace.Committed, committedEventHandler
             AddHandler newObjectViewObjectSpace.Disposed, disposedEventHandler
