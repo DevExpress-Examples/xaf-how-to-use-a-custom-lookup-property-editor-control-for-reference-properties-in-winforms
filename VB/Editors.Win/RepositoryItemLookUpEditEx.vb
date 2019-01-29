@@ -46,8 +46,8 @@ Namespace Editors.Win
         Public Sub Init(ByVal displayFormat As String, ByVal helper As LookupEditorHelper)
             Me.helper_Renamed = helper
             BeginUpdate()
-            me.DisplayFormat.FormatString = displayFormat
-            me.DisplayFormat.FormatType = FormatType.Custom
+            DisplayFormat.FormatString = displayFormat
+            DisplayFormat.FormatType = FormatType.Custom
             EditFormat.FormatString = displayFormat
             EditFormat.FormatType = FormatType.Custom
             TextEditStyle = TextEditStyles.Standard
