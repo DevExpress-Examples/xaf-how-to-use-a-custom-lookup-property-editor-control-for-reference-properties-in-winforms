@@ -120,7 +120,7 @@ Namespace Editors.Win
         End Sub
         Protected Overridable Sub OpenCurrentObject(ByVal lookup As LookUpEditEx)
             Dim svp As New ShowViewParameters()
-            Dim openObjectViewObjectSpace As IObjectSpace = lookup.Properties.Helper.Application.CreateObjectSpace()
+            Dim openObjectViewObjectSpace As IObjectSpace = lookup.Properties.Helper.Application.CreateObjectSpace(lookup.Properties.Helper.LookupObjectTypeInfo.Type)
             Dim targetObject As Object = openObjectViewObjectSpace.GetObject(lookup.EditValue)
             If targetObject IsNot Nothing Then
                 Dim committedEventHandler As EventHandler = Sub(s, e)
@@ -147,7 +147,7 @@ Namespace Editors.Win
         End Sub
         Protected Overridable Sub AddNewObject(ByVal lookup As LookUpEditEx)
             Dim svp As New ShowViewParameters()
-            Dim newObjectViewObjectSpace As IObjectSpace = lookup.Properties.Helper.Application.CreateObjectSpace()
+            Dim newObjectViewObjectSpace As IObjectSpace = lookup.Properties.Helper.Application.CreateObjectSpace(lookup.Properties.Helper.LookupObjectTypeInfo.Type)
             Dim newObject As Object = newObjectViewObjectSpace.CreateObject(lookup.Properties.Helper.LookupObjectTypeInfo.Type)
             lookupObjectView = lookup.Properties.Helper.Application.CreateDetailView(newObjectViewObjectSpace, newObject, True)
             svp.CreatedView = lookupObjectView
