@@ -118,7 +118,7 @@ namespace Editors.Win {
         }
         protected virtual void OpenCurrentObject(LookUpEditEx lookup) {
             ShowViewParameters svp = new ShowViewParameters();
-            IObjectSpace openObjectViewObjectSpace = lookup.Properties.Helper.Application.CreateObjectSpace();
+            IObjectSpace openObjectViewObjectSpace = lookup.Properties.Helper.Application.CreateObjectSpace(lookup.Properties.Helper.LookupObjectTypeInfo.Type);
             object targetObject = openObjectViewObjectSpace.GetObject(lookup.EditValue);
             if(targetObject != null) {
                 EventHandler committedEventHandler = (s, e) => {
@@ -145,7 +145,7 @@ namespace Editors.Win {
         }
         protected virtual void AddNewObject(LookUpEditEx lookup) {
             ShowViewParameters svp = new ShowViewParameters();
-            IObjectSpace newObjectViewObjectSpace = lookup.Properties.Helper.Application.CreateObjectSpace();
+            IObjectSpace newObjectViewObjectSpace = lookup.Properties.Helper.Application.CreateObjectSpace(lookup.Properties.Helper.LookupObjectTypeInfo.Type);
             object newObject = newObjectViewObjectSpace.CreateObject(lookup.Properties.Helper.LookupObjectTypeInfo.Type);
             lookupObjectView = lookup.Properties.Helper.Application.CreateDetailView(newObjectViewObjectSpace, newObject, true);
             svp.CreatedView = lookupObjectView;
