@@ -165,18 +165,6 @@ namespace Editors.Win {
             newObjectViewObjectSpace.Disposed += disposedEventHandler;
             lookup.Properties.Helper.Application.ShowViewStrategy.ShowView(svp, new ShowViewSource(null, null));
         }
-        public override void Refresh() {
-            RefreshCore(Control);
-            base.Refresh();
-        }
-        private void RefreshCore(LookUpEditEx lookup) {
-            if(lookup != null) {
-                UpdateButtons(lookup);
-                lookup.RefreshEditValue();
-                lookup.UpdateDisplayText();
-                lookup.Refresh();
-            }
-        }
         public LookupEditorHelper Helper {
             get { return helperCore; }
         }
