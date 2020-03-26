@@ -167,18 +167,6 @@ Namespace Editors.Win
             AddHandler newObjectViewObjectSpace.Disposed, disposedEventHandler
             lookup.Properties.Helper.Application.ShowViewStrategy.ShowView(svp, New ShowViewSource(Nothing, Nothing))
         End Sub
-        Public Overrides Sub Refresh()
-            RefreshCore(Control)
-            MyBase.Refresh()
-        End Sub
-        Private Sub RefreshCore(ByVal lookup As LookUpEditEx)
-            If lookup IsNot Nothing Then
-                UpdateButtons(lookup)
-                lookup.RefreshEditValue()
-                lookup.UpdateDisplayText()
-                lookup.Refresh()
-            End If
-        End Sub
         Public ReadOnly Property Helper() As LookupEditorHelper
             Get
                 Return helperCore
