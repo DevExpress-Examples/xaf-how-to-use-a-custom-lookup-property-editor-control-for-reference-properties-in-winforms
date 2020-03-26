@@ -1,5 +1,5 @@
 # How to use a custom Lookup Property Editor control for reference properties in WinForms
-![Custom Lookup](https://github.com/Kill4kan/XAF_how-to-use-a-custom-lookup-property-editor-control-for-reference-properties-in-winforms-e1101/blob/18.1.5%2B/media/SimpleLookupEditor.png)
+![Custom Lookup](https://github.com/Kill4kan/XAF_how-to-use-a-custom-lookup-property-editor-control-for-reference-properties-in-winforms-e1101/blob/18.1.5%2B/media/CustomLookup.png)
 
 ### FEATURES
 LookupPropertyEditorEx
