@@ -15,6 +15,7 @@ This example demonstrates a simple drop-down editor for reference properties. Th
 **Implementation Details**
 
 The _Editors.Win_ module implements a reusable `LookupPropertyEditorEx` class. This is an XAF Property Editor that can be used for reference properties instead of the standard LookupPropertyEditor in WinForms XAF applications.
+
 The `LookUpEditEx` and `RepositoryItemLookUpEditEx` classes implement a control for this Property Editor. This control is inherited from the `LookUpEdit` class and extends it with additional features required for the Property Editor.
 
 **Important Notes**
