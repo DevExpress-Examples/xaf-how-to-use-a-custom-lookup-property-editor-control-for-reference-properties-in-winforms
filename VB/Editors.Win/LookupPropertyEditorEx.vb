@@ -1,12 +1,10 @@
-﻿Imports System
-Imports System.Collections
 Imports DevExpress.ExpressApp
-Imports DevExpress.ExpressApp.Model
 Imports DevExpress.ExpressApp.Editors
-Imports DevExpress.XtraEditors.Controls
-Imports DevExpress.ExpressApp.Win.Editors
-Imports DevExpress.XtraEditors.Repository
+Imports DevExpress.ExpressApp.Model
 Imports DevExpress.ExpressApp.Utils
+Imports DevExpress.ExpressApp.Win.Editors
+Imports DevExpress.XtraEditors.Controls
+Imports DevExpress.XtraEditors.Repository
 
 Namespace Editors.Win
     <PropertyEditor(GetType(Object), EditorAliases.LookupPropertyEditor, False)> _
@@ -56,6 +54,7 @@ Namespace Editors.Win
             AddHandler properties.Enter, AddressOf properties_Enter
             AddHandler properties.ButtonClick, AddressOf properties_ButtonClick
             AddHandler properties.EditValueChanged, AddressOf properties_EditValueChanged
+            AddHandler properties.Closed, AddressOf properties_Closed
             AddHandler properties.Disposed, AddressOf properties_Disposed
 
             Dim openButton As New EditorButton(ButtonPredefines.Ellipsis)
@@ -81,16 +80,23 @@ Namespace Editors.Win
             RemoveHandler properties.Enter, AddressOf properties_Enter
             RemoveHandler properties.ButtonClick, AddressOf properties_ButtonClick
             RemoveHandler properties.EditValueChanged, AddressOf properties_EditValueChanged
+            RemoveHandler properties.Closed, AddressOf properties_Closed
             RemoveHandler properties.Disposed, AddressOf properties_Disposed
         End Sub
         Private Sub properties_EditValueChanged(ByVal sender As Object, ByVal e As EventArgs)
             Dim lookup As LookUpEditEx = DirectCast(sender, LookUpEditEx)
             UpdateButtons(lookup)
         End Sub
+        Private Sub properties_Closed(ByVal sender As Object, ByVal e As EventArgs)
+            Dim lookup As LookUpEditEx = DirectCast(sender, LookUpEditEx)
+            UpdateButtons(lookup)
+        End Sub
         Private Sub UpdateButtons(ByVal lookup As LookUpEditEx)
-            Dim enabled As Boolean = (lookup.EditValue IsNot Nothing) AndAlso (lookup.EditValue IsNot DBNull.Value)
-            lookup.Properties.Buttons(1).Enabled = enabled
-            lookup.Properties.Buttons(3).Enabled = enabled
+            If (Not lookup.IsPopupOpen) Then
+                Dim enabled As Boolean = (lookup.EditValue IsNot Nothing) AndAlso (lookup.EditValue IsNot DBNull.Value)
+                lookup.Properties.Buttons(1).Enabled = enabled
+                lookup.Properties.Buttons(3).Enabled = enabled
+            End If
         End Sub
         Private Sub properties_Enter(ByVal sender As Object, ByVal e As EventArgs)
             Dim lookup As LookUpEditEx = DirectCast(sender, LookUpEditEx)
