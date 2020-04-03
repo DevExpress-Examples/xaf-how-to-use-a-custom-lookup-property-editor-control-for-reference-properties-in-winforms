@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Model;
@@ -54,6 +54,7 @@ namespace Editors.Win {
             properties.Enter += properties_Enter;
             properties.ButtonClick += properties_ButtonClick;
             properties.EditValueChanged += properties_EditValueChanged;
+            properties.Closed += properties_Closed;
             properties.Disposed += properties_Disposed;
 
             EditorButton openButton = new EditorButton(ButtonPredefines.Ellipsis);
@@ -80,20 +81,27 @@ namespace Editors.Win {
             properties.ButtonClick -= properties_ButtonClick;
             properties.EditValueChanged -= properties_EditValueChanged;
             properties.Disposed -= properties_Disposed;
+            properties.Closed -= properties_Closed;
         }
         private void properties_EditValueChanged(object sender, EventArgs e) {
             LookUpEditEx lookup = (LookUpEditEx)sender;
             UpdateButtons(lookup);
         }
-        private void UpdateButtons(LookUpEditEx lookup) {
-            bool enabled = (lookup.EditValue != null) && (lookup.EditValue != DBNull.Value);
-            lookup.Properties.Buttons[1].Enabled = enabled;
-            lookup.Properties.Buttons[3].Enabled = enabled;
+        private void properties_Closed(object sender, ClosedEventArgs e) {
+            LookUpEditEx lookup = (LookUpEditEx)sender;
+            UpdateButtons(lookup);
         }
         private void properties_Enter(object sender, EventArgs e) {
             LookUpEditEx lookup = (LookUpEditEx)sender;
             InitializeDataSource(lookup);
             UpdateButtons(lookup);
+        }
+        private void UpdateButtons(LookUpEditEx lookup) {
+            if (!lookup.IsPopupOpen) {
+                bool enabled = (lookup.EditValue != null) && (lookup.EditValue != DBNull.Value);
+                lookup.Properties.Buttons[1].Enabled = enabled;
+                lookup.Properties.Buttons[3].Enabled = enabled;
+            }
         }
         protected virtual void InitializeDataSource(LookUpEditEx lookup) {
             if(lookup != null && lookup.Properties != null && lookup.Properties.Helper != null) {
