@@ -6,13 +6,13 @@
 
 # XAF WinForms - How to use a custom Lookup Property Editor control for reference properties
 
-**Scenario**
+## Scenario
 
 This example demonstrates a simple drop-down editor for reference properties. The editor provides the **Open**, **Add** and **Clear** buttons.
 
 ![Custom Lookup](./media/CustomLookup.png)
 
-**Implementation Details**
+## Implementation Details
 
 1. The _Editors.Win_ module implements a reusable `LookupPropertyEditorEx` class. This is an XAF Property Editor that can be used for reference properties instead of the standard `LookupPropertyEditor` in WinForms XAF applications.
 
