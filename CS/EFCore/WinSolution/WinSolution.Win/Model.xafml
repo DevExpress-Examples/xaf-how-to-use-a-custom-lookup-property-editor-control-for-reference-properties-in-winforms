@@ -1,0 +1,11 @@
+﻿<Application Logo="ExpressAppLogo">
+	<Options UIType="TabbedMDI" FormStyle="Ribbon" />
+	<NavigationItems NavigationStyle="Accordion" DefaultChildItemsDisplayStyle="List"/>
+	<BOModel>
+		<Class Name="WinSolution.Module.DemoObject">
+			<OwnMembers>
+				<Member Name="LookupProperty" PropertyEditorType="Editors.Win.LookupPropertyEditorEx" />
+			</OwnMembers>
+		</Class>
+	</BOModel>
+</Application>
