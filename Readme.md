@@ -1,5 +1,4 @@
 <!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/128594111/22.2.3%2B)
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E1101)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
@@ -33,10 +32,16 @@ This example demonstrates a simple drop-down editor for reference properties. Th
    
    If you want to change this, then invoke the Model Editor for the Windows Forms application project or module, and change the **EditorType** property of the **DetailViewItems** | **PropertyEditors** | **LookupProperty** node. Or change the **PropertyEditorType** property for a class member, List View column or Detail View item nodes individually.
 
-## Files to Review
-* [LookupPropertyEditorEx.cs](./CS/EFCore/Editors.Win/LookupPropertyEditorEx.cs) (VB: [LookupPropertyEditorEx.vb](./VB/Editors.Win/LookupPropertyEditorEx.vb))
-* [LookUpEditEx.cs](./CS/EFCore/Editors.Win/LookUpEditEx.cs) (VB: [LookUpEditEx.vb](./VB/Editors.Win/LookUpEditEx.vb))
-* [RepositoryItemLookUpEditEx.cs](./CS/EFCore/Editors.Win/RepositoryItemLookUpEditEx.cs) (VB: [RepositoryItemLookUpEditEx.vb](./VB/Editors.Win/RepositoryItemLookUpEditEx.vb))
+## Files to Review (XPO)
+* [LookupPropertyEditorEx.cs](./CS/XPO/Editors.Win/LookupPropertyEditorEx.cs) (VB: [LookupPropertyEditorEx.vb](./VB/Editors.Win/LookupPropertyEditorEx.vb))
+* [LookUpEditEx.cs](./CS/XPO/Editors.Win/LookUpEditEx.cs) (VB: [LookUpEditEx.vb](./VB/Editors.Win/LookUpEditEx.vb))
+* [RepositoryItemLookUpEditEx.cs](./CS/XPO/Editors.Win/RepositoryItemLookUpEditEx.cs) (VB: [RepositoryItemLookUpEditEx.vb](./VB/Editors.Win/RepositoryItemLookUpEditEx.vb))
+
+## Files to Review (EF Core)
+* [LookupPropertyEditorEx.cs](./CS/EFCore/Editors.Win/LookupPropertyEditorEx.cs)
+* [LookUpEditEx.cs](./CS/EFCore/Editors.Win/LookUpEditEx.cs)
+* [RepositoryItemLookUpEditEx.cs](./CS/EFCore/Editors.Win/RepositoryItemLookUpEditEx.cs)
+
 
 ## Documentation
 
