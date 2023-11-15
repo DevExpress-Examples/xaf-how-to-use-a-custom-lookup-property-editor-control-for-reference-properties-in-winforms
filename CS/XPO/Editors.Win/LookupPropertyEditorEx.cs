@@ -125,7 +125,7 @@ namespace Editors.Win {
             }
         }
         protected virtual void OpenCurrentObject(LookUpEditEx lookup) {
-            ShowViewParameters svp = new ShowViewParameters();
+           
             IObjectSpace openObjectViewObjectSpace = lookup.Properties.Helper.Application.CreateObjectSpace(lookup.Properties.Helper.LookupObjectTypeInfo.Type);
             object targetObject = openObjectViewObjectSpace.GetObject(lookup.EditValue);
             if(targetObject != null) {
@@ -143,8 +143,8 @@ namespace Editors.Win {
                 openObjectViewObjectSpace.Committed += committedEventHandler;
                 openObjectViewObjectSpace.Disposed += disposedEventHandler;
                 lookupObjectView = lookup.Properties.Helper.Application.CreateDetailView(openObjectViewObjectSpace, targetObject, true);
-                svp.CreatedView = lookupObjectView;
-                lookup.Properties.Helper.Application.ShowViewStrategy.ShowView(svp, new ShowViewSource(null, null));
+
+                lookup.Properties.Helper.Application.ShowViewStrategy.ShowViewInPopupWindow(lookupObjectView);
             }
         }
         protected virtual void ClearCurrentObject(LookUpEditEx lookup) {
