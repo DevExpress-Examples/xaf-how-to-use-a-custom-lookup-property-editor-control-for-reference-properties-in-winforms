@@ -34,9 +34,9 @@ This example demonstrates a simple drop-down editor for reference properties. Th
    If you want to change this, then invoke the Model Editor for the Windows Forms application project or module, and change the **EditorType** property of the **DetailViewItems** | **PropertyEditors** | **LookupProperty** node. Or change the **PropertyEditorType** property for a class member, List View column or Detail View item nodes individually.
 
 ## Files to Review (XPO)
-* [LookupPropertyEditorEx.cs](./CS/XPO/Editors.Win/LookupPropertyEditorEx.cs) (VB: [LookupPropertyEditorEx.vb](./VB/Editors.Win/LookupPropertyEditorEx.vb))
-* [LookUpEditEx.cs](./CS/XPO/Editors.Win/LookUpEditEx.cs) (VB: [LookUpEditEx.vb](./VB/Editors.Win/LookUpEditEx.vb))
-* [RepositoryItemLookUpEditEx.cs](./CS/XPO/Editors.Win/RepositoryItemLookUpEditEx.cs) (VB: [RepositoryItemLookUpEditEx.vb](./VB/Editors.Win/RepositoryItemLookUpEditEx.vb))
+* [LookupPropertyEditorEx.cs](./CS/XPO/Editors.Win/LookupPropertyEditorEx.cs) 
+* [LookUpEditEx.cs](./CS/XPO/Editors.Win/LookUpEditEx.cs) 
+* [RepositoryItemLookUpEditEx.cs](./CS/XPO/Editors.Win/RepositoryItemLookUpEditEx.cs) 
 
 ## Files to Review (EF Core)
 * [LookupPropertyEditorEx.cs](./CS/EFCore/Editors.Win/LookupPropertyEditorEx.cs)
