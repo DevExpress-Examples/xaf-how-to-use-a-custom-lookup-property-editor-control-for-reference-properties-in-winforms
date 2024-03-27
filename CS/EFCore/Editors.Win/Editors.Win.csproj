@@ -15,10 +15,10 @@
     <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.ExpressApp" Version="22.2.3" />
-	<PackageReference Include="DevExpress.ExpressApp.Win" Version="22.2.3" />
-    <PackageReference Include="DevExpress.ExpressApp.CodeAnalysis" Version="22.2.3" />
-    <PackageReference Include="DevExpress.Persistent.Base" Version="22.2.3" />
-    <PackageReference Include="DevExpress.Win.Design" Version="22.2.3" />
+    <PackageReference Include="DevExpress.ExpressApp" Version="22.2.10" />
+	<PackageReference Include="DevExpress.ExpressApp.Win" Version="22.2.10" />
+    <PackageReference Include="DevExpress.ExpressApp.CodeAnalysis" Version="22.2.10" />
+    <PackageReference Include="DevExpress.Persistent.Base" Version="22.2.10" />
+    <PackageReference Include="DevExpress.Win.Design" Version="22.2.10" />
   </ItemGroup>
 </Project>
