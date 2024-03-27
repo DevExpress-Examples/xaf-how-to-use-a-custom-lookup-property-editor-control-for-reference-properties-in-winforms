@@ -17,6 +17,7 @@ namespace WinSolution.Module {
         private DemoLookupObject _LookupProperty;
         [ImmediatePostData]
         [VisibleInListView(true)]
+        [LookupEditorMode(LookupEditorMode.AllItems)]
         public DemoLookupObject LookupProperty {
             get { return _LookupProperty; }
             set { SetPropertyValue("LookupProperty", ref _LookupProperty, value); }

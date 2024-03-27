@@ -10,6 +10,7 @@ namespace WinSolution.Module {
         public virtual string Name { get; set; }
         [ImmediatePostData]
         [VisibleInListView(true)]
+        [LookupEditorMode(LookupEditorMode.AllItems)]
         public virtual DemoLookupObject LookupProperty { get; set; }
     }
 }
