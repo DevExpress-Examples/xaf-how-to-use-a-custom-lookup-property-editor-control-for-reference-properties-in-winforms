@@ -48,6 +48,5 @@ The `LookUpEditEx` and `RepositoryItemLookUpEditEx` classes implement a control 
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=xaf-win-custom-lookup-property-editor&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=xaf-win-custom-lookup-property-editor&~~~was_helpful=no)
 
-(You will be redirected to DevExpress.com to submit your response.)
-
+(you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->
