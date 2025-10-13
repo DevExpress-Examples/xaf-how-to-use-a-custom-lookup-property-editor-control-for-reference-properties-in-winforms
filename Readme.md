@@ -6,7 +6,8 @@
 
 # XAF WinForms - How to use a custom Lookup Property Editor control for reference properties
 
-This example demonstrates a simple drop-down editor for reference properties. The editor contains **Open**, **Add** and **Clear** buttons.
+This example demonstrates a simple drop-down editor for reference properties. The editor contains **Open**, **Add**, and **Clear** buttons.
+
 
 ![Custom Lookup](./media/CustomLookup.png)
 
@@ -47,5 +48,6 @@ The `LookUpEditEx` and `RepositoryItemLookUpEditEx` classes implement a control 
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=xaf-win-custom-lookup-property-editor&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=xaf-win-custom-lookup-property-editor&~~~was_helpful=no)
 
-(you will be redirected to DevExpress.com to submit your response)
+(You will be redirected to DevExpress.com to submit your response.)
+
 <!-- feedback end -->
